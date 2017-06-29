@@ -1,11 +1,22 @@
 
-<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('fruits1.jpg') %>">
+<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('food.jpg') %>">
   <h1>Chez Marie</h1>
 </div>
 <div class="wrapper">
-  <i class="fa fa-map-marker" aria-hidden="true"></i>
-  Adresse
-  Horaires
+  <div class="address">
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+    17 rue Fontaines 87230 CHAMPSAC
+  </div>
+  <div class="hours">
+    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Tous les jours :</p>
+    <p>7h30 | 13h30</p>
+    <p>17h | 19h30</p>
+  </div>
+  <div class="phone">
+    <a href="tel:0555785762" class="btn btn-danger">
+      05.55.78.57.62
+    </a>
+  </div>
 </div>
 <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('fruits2.jpg') %>">
   <h1>Fruits et Légumes</h1>
