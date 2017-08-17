@@ -17,6 +17,18 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
+# Personnal gems
+gem 'cloudinary', '1.1.0'
+gem 'faker'
+gem 'ancestry'
+gem "attachinary", github: "assembler/attachinary"
+
+#for email
+gem "letter_opener", group: :development
+
+#for pg_search
+gem 'pg_search'
+
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
