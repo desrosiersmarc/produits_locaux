@@ -1,0 +1,25 @@
+.create-supplier {
+  background-color: $red;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  font-size: 30px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.supplier-card {
+    height: 200px;
+    background-color: #DDD;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
