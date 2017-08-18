@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <h2>Liste des fournisseurs</h2>
+      <% @suppliers.each do |supplier| %>
+        <div class="col-xs-12 col-sm-6">
+          <div class="supplier-card">
+            <p><%= supplier.name %></p>
+            <%= link_to edit_supplier_path(supplier) do %>
+              <p class="btn btn-danger">
+                Modifier
+              </p>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <%= link_to new_supplier_path do %>
+      <div class="create-supplier">
+        +
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
