@@ -29,16 +29,16 @@ end
 puts ''
 
 puts 'Create Categories'
-viande = Category.create!(name: 'viande')
-patisserie = Category.create!(name: 'patisserie')
+viande = Category.create!(name: 'Viande')
+patisserie = Category.create!(name: 'Patisserie')
 fruits_et_legumes = Category.create!(name: 'Fruits et légumes')
 pain_et_viennoiserie = Category.create!(name: 'Pain et viennoiserie')
 traiteur = Category.create!(name: 'Traiteur')
-rouge = Category.create!(name: 'Rouge', parent: viande)
-blanche = Category.create!(name: 'Blanche', parent: viande)
-volaille = Category.create!(name: 'Volaille', parent: viande)
-pain = Category.create!(name: 'Pain', parent: pain_et_viennoiserie)
-viennoiserie = Category.create!(name: 'Viennoiserie', parent: pain_et_viennoiserie)
+# rouge = Category.create!(name: 'Rouge', parent: viande)
+# blanche = Category.create!(name: 'Blanche', parent: viande)
+# volaille = Category.create!(name: 'Volaille', parent: viande)
+# pain = Category.create!(name: 'Pain', parent: pain_et_viennoiserie)
+# viennoiserie = Category.create!(name: 'Viennoiserie', parent: pain_et_viennoiserie)
 puts '[x]'
 
 puts 'Create Products'
