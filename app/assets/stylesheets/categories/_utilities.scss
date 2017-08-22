@@ -1,0 +1,17 @@
+.category-parent {
+  font-weight: bold;
+}
+
+.category-children {
+  width: 300px;
+}
+
+.category-tree {
+  width: 50px;
+  border-left: solid $gray 1px;
+  border-bottom: solid $gray 1px;
+}
+
+.category-empty {
+  width: 20px;
+}
