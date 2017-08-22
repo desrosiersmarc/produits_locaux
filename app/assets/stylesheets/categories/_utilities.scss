@@ -4,14 +4,24 @@
 
 .category-children {
   width: 300px;
+  i {
+    color: $blue;
+  }
 }
 
 .category-tree {
-  width: 50px;
+  width: 20px;
   border-left: solid $gray 1px;
   border-bottom: solid $gray 1px;
+  i {
+    color: red;
+  }
 }
 
 .category-empty {
   width: 20px;
+}
+
+.td-empty {
+  height: 20px;
 }

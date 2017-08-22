@@ -1,0 +1,5 @@
+<%= simple_form_for(@category) do |f| %>
+  <%= f.input :name, label: 'Nom' %>
+  <%= f.input :ancestry, label: 'Catégorie', collection: @categories %>
+  <%= f.submit 'Mettre à jour', class: 'btn btn-danger btn-block' %>
+<% end %>
