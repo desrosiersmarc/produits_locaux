@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <h3>Création d'un nouveau produit</h3>
+
+    <%= simple_form_for(@product) do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :name, label: 'Nom' %>
+      <%= f.input :price, label: 'Prix' %>
+      <%= f.input :price_per_weight, label: 'Prix au kilo' %>
+      <%= f.input :weight, label: 'Poids en grammes' %>
+      <%= f.input :description %>
+      <%= f.input :active, label: 'Produit présent sur le site ?' %>
+      <%= f.input :category_id, label: 'Catégorie', collection: @categories %>
+      <%= f.input :supplier_id, label: 'Fournisseur', collection: @suppliers %>
+      <%= f.input :photo, as: :attachinary %>
+      <%= f.submit 'Créer le produit', class: 'btn btn-danger btn-block' %>
+    <% end %>
+
+  </div>
+</div>

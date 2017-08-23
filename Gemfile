@@ -18,10 +18,12 @@ gem 'simple_form'
 gem 'uglifier'
 
 # Personnal gems
-gem 'cloudinary', '1.1.0'
+gem 'cloudinary'
 gem 'faker'
 gem 'ancestry'
 gem "attachinary", github: "assembler/attachinary"
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
 
 #for email
 gem "letter_opener", group: :development
