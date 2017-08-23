@@ -46,7 +46,8 @@ class ProductsController < ApplicationController
         :description,
         :active,
         :category_id,
-        :supplier_id)
+        :supplier_id,
+        :photo)
     end
 
 

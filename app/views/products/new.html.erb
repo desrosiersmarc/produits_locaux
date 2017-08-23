@@ -12,6 +12,7 @@
       <%= f.input :active, label: 'Produit présent sur le site ?' %>
       <%= f.input :category_id, label: 'Catégorie', collection: @categories %>
       <%= f.input :supplier_id, label: 'Fournisseur', collection: @suppliers %>
+      <%= f.input :photo, as: :attachinary %>
       <%= f.submit 'Créer le produit', class: 'btn btn-danger btn-block' %>
     <% end %>
 
