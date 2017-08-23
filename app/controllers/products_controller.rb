@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
 
-  before_action :category_list, only: [:new, :create]
-  before_action :supplier_list, only: [:new, :create]
+  before_action :category_list, only: [:new, :create, :edit]
+  before_action :supplier_list, only: [:new, :create, :edit]
+  before_action :find_product, only: [:edit, :update]
   def index
     @products = Product.all
   end
@@ -23,10 +24,13 @@ class ProductsController < ApplicationController
   end
 
   def update
+    @product.update(product_params)
+    redirect_to products_path
   end
 
   private
     def find_product
+      @product = Product.find(params[:id])
     end
 
     def category_list
