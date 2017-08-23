@@ -8,7 +8,9 @@
             <strong>
               <%= product.name %>
             </strong>
-            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <%= link_to edit_product_path(product) do %>
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            <% end %>
             <i class="fa fa-times-circle-o" aria-hidden="true"></i>
           </p>
           <p>

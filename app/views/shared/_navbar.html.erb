@@ -31,6 +31,9 @@
               <% end %>
             </li>
             <li>
+              <%= render 'shared/products' %>
+            </li>
+            <li>
               <%= render 'shared/categories' %>
             </li>
             <li>
@@ -58,9 +61,8 @@
         <li><a href="#">Mes commandes</a></li>
         <li>### for admin only</li>
         <li><a href="#">Gestion des commandes</a></li>
-        <li>
-          <%= render 'shared/suppliers' %>
-        </li>
+        <li><%= render 'shared/products' %></li>
+        <li><%= render 'shared/suppliers' %></li>
         <li><%= render 'shared/categories' %></li>
       </ul>
     </div>
