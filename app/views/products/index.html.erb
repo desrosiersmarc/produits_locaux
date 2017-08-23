@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <h2>Produits</h2>
+    <% @products.each do |product| %>
+      <div>
+        <p>
+          <%= product.name %>
+        </p>
+      </div>
+    <% end %>
+
+      <%= link_to new_product_path do %>
+        <div class="create-supplier">
+          +
+        </div>
+      <% end %>
+  </div>
+</div>

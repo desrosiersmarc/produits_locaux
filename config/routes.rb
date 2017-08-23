@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :suppliers, only: [:index, :new, :edit, :create, :update]
 
   resources :categories
+
+  resources :products
 end
