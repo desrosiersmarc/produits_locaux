@@ -1,11 +1,33 @@
 <div class="container">
   <div class="row">
-    <h2>Produits</h2>
+    <h2>Liste des produits</h2>
     <% @products.each do |product| %>
-      <div>
-        <p>
-          <%= product.name %>
-        </p>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card-product">
+          <p>
+            <strong>
+              <%= product.name %>
+            </strong>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+          </p>
+          <p>
+            <%= product.price %> € |
+            <%= product.price_per_weight %> €/kg |
+            <%= product.weight %> g
+          </p>
+          <p>
+            Description : <%= product.description %>
+          </p>
+          <p>
+            Catégorie : <%= product.category.name %>
+
+          </p>
+          <p>
+            Fournisseur : <%= product.supplier.name %>
+          </p>
+          <%= helper_picture_tag(product) %>
+        </div>
       </div>
     <% end %>
 

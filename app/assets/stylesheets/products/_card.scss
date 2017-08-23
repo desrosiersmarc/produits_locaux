@@ -1,0 +1,11 @@
+.card-product {
+  border-radius: 3px;
+  border: solid 1px $gray;
+  background-color: $gray-lighter;
+  height: 350px;
+  padding: 10px;
+  margin-top: 10px;
+  img {
+    height: 140px;
+  }
+}
