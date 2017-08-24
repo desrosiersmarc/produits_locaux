@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h2><%= @category.name %> </h2>
+    <h3><%= @category.name %> </h3>
 
     <div class='menu-items'>
       <div class='navigation-menu'>
@@ -16,7 +16,7 @@
 
         <%= arranged_tree_as_list(@category.children.arrange) do |category| %>
           <%= link_to(category_path(category), class: "btn btn-danger") do %>
-            <%= category.name %>
+            <%= category.name %> (<%= category.products.count %>)
           <% end %>
         <% end %>
 
