@@ -25,3 +25,21 @@
 .td-empty {
   height: 20px;
 }
+
+.menu-items {
+  ul li {
+    display: inline;
+  }
+}
+
+.navigation-menu {
+  display: flex;
+  i {
+    color: $red;
+    font-size: 36px;
+    margin-left: 10px;
+  }
+  ul {
+    -webkit-padding-start: 10px;
+  }
+}

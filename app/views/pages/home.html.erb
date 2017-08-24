@@ -22,31 +22,40 @@
     </a>
   </div>
 </div>
-<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('fruits2.jpg') %>">
-  <h1>Fruits et Légumes</h1>
-</div>
+<%= link_to category_path(@categories[2]) do %>
+  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('fruits2.jpg') %>">
+    <h1>Fruits et Légumes</h1>
+  </div>
+<% end %>
 <div class="wrapper">
   Appelez nous pour faire votre commande
 </div>
-<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('viande.jpg') %>)">
-  <h1>Viandes</h1>
-</div>
+<%= link_to category_path(@categories[0]) do %>
+  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('viande.jpg') %>)">
+    <h1>Viandes</h1>
+  </div>
+<% end %>
 <div class="wrapper">
   Pains et viennoiserie fabriqués sur place
 </div>
-<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('viennoiserie.jpg') %>)">
-  <h1>Pains et Viennoiserie</h1>
-</div>
+<%= link_to category_path(@categories[3]) do %>
+  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('viennoiserie.jpg') %>)">
+    <h1>Pains et Viennoiserie</h1>
+  </div>
+<% end %>
 <div class="wrapper">
   Commandez vos gâteaux 24 heures en avance
 </div>
-<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('patisserie.jpg') %>)">
-  <h1>Patisserie</h1>
-</div>
+<%= link_to category_path(@categories[1]) do %>
+  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('patisserie.jpg') %>)">
+    <h1>Patisserie</h1>
+  </div>
+<% end %>
 <div class="wrapper">
   Commandez vos petits fours quelques jours avant
 </div>
-<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('https://static.pexels.com/photos/162918/pizza-cheese-margarita-homemade-162918.jpeg') %>)">
-  <h1>Traiteur</h1>
-</div>
-
+<%= link_to category_path(@categories[4]) do %>
+  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('https://static.pexels.com/photos/162918/pizza-cheese-margarita-homemade-162918.jpeg') %>)">
+    <h1>Traiteur</h1>
+  </div>
+<% end %>
