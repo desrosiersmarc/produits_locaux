@@ -1,9 +1,12 @@
 class CategoriesController < ApplicationController
   before_action :categories_parent, only: [:index, :new, :create, :edit]
-  before_action :find_category, only: [:edit, :update, :destroy]
+  before_action :find_category, only: [:edit, :update, :destroy, :show]
 
   def index
     @Products = Product.all
+  end
+
+  def show
   end
 
   def new
