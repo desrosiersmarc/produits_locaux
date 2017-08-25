@@ -1,0 +1,25 @@
+<div class="col-xs-12 col-sm-4 col-md-3">
+  <div class="card-product">
+    <div class="card-price-per-weight">
+      <%= product.price_per_weight %> €/kg
+    </div>
+    <div class="picture">
+      <%= helper_picture_tag(product) %>
+    </div>
+    <div class="card-description">
+      <%= product.description %>
+    </div>
+    <div class="card-name">
+      <%= product.name %>
+    </div>
+    <div class="card-price">
+      <%= product.price %> €
+    </div>
+    <div class="card-weight">
+      <%= product.weight %> g
+    </div>
+    <div class="card-add-basket">
+      <a href="#" class="btn btn-primary btn-block"> Ajouter au panier</a>
+    </div>
+  </div>
+</div>
