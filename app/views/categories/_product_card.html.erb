@@ -3,8 +3,10 @@
     <div class="card-price-per-weight">
       <%= product.price_per_weight %> €/kg
     </div>
-    <div class="picture">
+<!--     <div class="picture">
       <%= helper_picture_tag(product) %>
+    </div> -->
+    <div class="picture" style="background-image: url(<%= helper_picture_url(product) %>);">
     </div>
     <div class="card-description">
       <%= product.description %>

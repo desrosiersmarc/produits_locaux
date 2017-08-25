@@ -28,7 +28,8 @@
           <p>
             Fournisseur : <%= product.supplier.name %>
           </p>
-          <%= helper_picture_tag(product) %>
+          <div class="picture" style="background-image: url(<%= helper_picture_url(product) %>);">
+          </div>
         </div>
       </div>
     <% end %>

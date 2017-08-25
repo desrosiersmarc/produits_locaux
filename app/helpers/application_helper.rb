@@ -11,7 +11,7 @@ module ApplicationHelper
     if thing.photo?
       cl_image_path(thing.photo.path)
     else
-      image_tag("without_picture.jpg")
+      image_path("without_picture.jpg")
     end
   end
 
