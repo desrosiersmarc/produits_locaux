@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :categories
 
-  resources :products
+  resources :products, only: [:index, :new, :create, :edit, :update]
 
   get '/categories/*id' => 'categories#show'
 end

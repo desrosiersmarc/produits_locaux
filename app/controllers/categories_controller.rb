@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
   before_action :categories_parent, only: [:index, :new, :create, :edit]
   before_action :find_category, only: [:edit, :update, :destroy, :show]
 
