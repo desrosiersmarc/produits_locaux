@@ -50,9 +50,10 @@
 
 .card-name {
   position: absolute;
-  bottom: 103px;
   left: 15px;
   font-weight: bolder;
+  max-width: 149px;
+  top: 216px;
 }
 
 .card-description {
