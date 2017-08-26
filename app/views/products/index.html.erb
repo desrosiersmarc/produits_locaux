@@ -3,34 +3,15 @@
     <h2>Liste des produits</h2>
     <% @products.each do |product| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card-product">
-          <p>
-            <strong>
-              <%= product.name %>
-            </strong>
-            <%= link_to edit_product_path(product) do %>
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            <% end %>
-            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-          </p>
-          <p>
-            <%= product.price %> € |
-            <%= product.price_per_weight %> €/kg |
-            <%= product.weight %> g
-          </p>
-          <p>
-            Description : <%= product.description %>
-          </p>
-          <p>
-            Catégorie : <%= product.category.name %>
-
-          </p>
-          <p>
-            Fournisseur : <%= product.supplier.name %>
-          </p>
-          <div class="picture" style="background-image: url(<%= helper_picture_url(product) %>);">
-          </div>
+        <div class="card-admin-informations">
+          <%= link_to edit_product_path(product) do %>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          <% end %>
+          <%= product.name %>
+          <p>Catégorie : <%= product.category.name %></p>
+          <p>Fournisseur : <%= product.supplier.name %></p>
         </div>
+          <%= render 'categories/product_card', {product: product} %>
       </div>
     <% end %>
 
