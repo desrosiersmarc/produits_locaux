@@ -31,12 +31,20 @@ gem "letter_opener", group: :development
 #for pg_search
 gem 'pg_search'
 
-group :development, :test do
+group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  #For TDD
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
+  gem 'minitest-reporters'
 end
