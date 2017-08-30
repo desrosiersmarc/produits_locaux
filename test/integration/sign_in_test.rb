@@ -10,8 +10,8 @@ class SignInTest < ActionDispatch::IntegrationTest
     #login_as users(:marc_not_admin)
     #visit "/"
     #assert_equal 200, page.status_code
-    #click_on "Log out"
-    #assert page.has_content?("profile")
+    #c#lick_on "Log out"
+    ##assert page.has_content?("profile")
     #save_and_open_screenshot
   end
 end
