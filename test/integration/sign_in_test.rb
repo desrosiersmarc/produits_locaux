@@ -12,6 +12,6 @@ class SignInTest < ActionDispatch::IntegrationTest
     assert_equal 200, page.status_code
     #click_on "Log out"
     #assert page.has_content?("profile")
-    save_and_open_screenshot
+    #save_and_open_screenshot
   end
 end
