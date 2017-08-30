@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Tomates
   price: 1.5
   price_per_weight: 1.5
   weight: 1
   description: MyString
   active: false
-  category: one
+  category: zero
   supplier: one
 
 two:
-  name: MyString
+  name: Pain Limousin
   price: 1.5
   price_per_weight: 1.5
   weight: 1

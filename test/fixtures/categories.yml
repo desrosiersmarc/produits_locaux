@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+zero:
+    id: 0
+    name: Viande
 one:
-  name: MyString
-  ancestry: MyString
-
+    id: 1
+    name: Patisserie
 two:
-  name: MyString
-  ancestry: MyString
+    id: 2
+    name: Fruits et Légumes
+three:
+    id: 3
+    name: Pain et Viennoiserie
+four:
+    id: 4
+    name: Traiteur
