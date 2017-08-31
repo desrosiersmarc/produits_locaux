@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 0
   name: Metro
 
 two:
+  id: 1
   name: Boulangerie Firmin
