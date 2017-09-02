@@ -3,6 +3,8 @@ class Product < ApplicationRecord
   belongs_to :supplier
   belongs_to :category
 
+  has_many :order_items
+
   has_attachment :photo
 
   validates :name, presence: true, length: { maximum: 50, minimum: 5}
