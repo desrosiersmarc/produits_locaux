@@ -8,6 +8,34 @@
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
+  i {
+    font-size: 30px;
+    color: $blue;
+  }
+}
+
+.order-items-count {
+  width: 24px;
+  height:24px;
+  border-radius: 12px;
+  background-color: $red;
+  color: #FFF;
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  text-align: center;
+  line-height: 24px;
+  border: solid 1px #FFF;
+  font-size: 12px;
+}
+
+.shopping-basket {
+  position: relative;
+  padding-right: 20px;
+}
+
+.right-mobile-menu {
+  display: flex;
 }
 
 /* Optional class to fix the navbar on top */
@@ -35,7 +63,7 @@
 .navbar-wagon-item {
   flex: 0 1 auto;
   cursor: pointer;
-  padding: 0 20px;
+  // padding: 0 20px;
 }
 
 /* Navbar standard link */
