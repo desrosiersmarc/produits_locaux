@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
   def index
     @Products = Product.all.where(active: true)
     @order_item = current_order.order_items.new
+    @order_items = current_order.order_items
   end
 
   def show
