@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  get 'order_items/create'
-
-  get 'order_items/update'
-
-  get 'order_items/destroy'
-
-  get 'carts/show'
 
   devise_for :users
   mount Attachinary::Engine => "/attachinary"
@@ -17,6 +10,10 @@ Rails.application.routes.draw do
   resources :categories
 
   resources :products, only: [:index, :new, :create, :edit, :update]
+
+  resources :cart, only: [:show]
+
+  resources :order_items, only: [:create, :update, :destroy]
 
   get '/categories/*id' => 'categories#show'
 end
