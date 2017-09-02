@@ -4,7 +4,8 @@ class CategoriesController < ApplicationController
   before_action :find_category, only: [:edit, :update, :destroy, :show]
 
   def index
-    @Products = Product.all
+    @Products = Product.all.where(active: true)
+    @order_item = current_order.order_items.new
   end
 
   def show
