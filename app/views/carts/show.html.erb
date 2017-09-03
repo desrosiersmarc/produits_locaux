@@ -1,4 +1,7 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
+<h2>Voici votre panier</h2>
 
-<%= @order_items.inspect %>
+<% @order_items.each do |oi| %>
+  <%= oi.name %>
+<% end %>
+
+<h2>Ici</h2>
