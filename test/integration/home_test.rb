@@ -14,11 +14,10 @@ class HomeTest < ActionDispatch::IntegrationTest
   assert_equal 200, page.status_code
   assert page.has_content?("Chez Marie")
   assert page.has_content?("Viande")
-  #assert page.has_selector?('.card-product', count: Product.count)
+    # save_and_open_screenshot
 
   click_on 'Viande'
-#    assert page.has_content?("Tomates")
-#    save_and_open_screenshot
+  #save_and_open_screenshot
   # teardown
   end
 

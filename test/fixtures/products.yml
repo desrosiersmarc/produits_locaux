@@ -14,7 +14,7 @@ one:
 two:
   id: 1
   name: Pain Limousin
-  price: 1.5
+  price: 5
   price_per_weight: 1.5
   weight: 1
   description: MyString

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   mount Attachinary::Engine => "/attachinary"
 
@@ -9,6 +10,10 @@ Rails.application.routes.draw do
   resources :categories
 
   resources :products, only: [:index, :new, :create, :edit, :update]
+
+  resource :cart, only: [:show]
+
+  resources :order_items, only: [:create, :update, :destroy]
 
   get '/categories/*id' => 'categories#show'
 end

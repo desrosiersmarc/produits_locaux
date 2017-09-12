@@ -15,4 +15,8 @@ module ApplicationHelper
     end
   end
 
+  def order_items_count
+    current_order.order_items.collect{|oi| oi.quantity}.sum
+  end
+
 end
