@@ -14,6 +14,8 @@ class HomeTest < ActionDispatch::IntegrationTest
   assert_equal 200, page.status_code
   assert page.has_content?("Chez Marie")
   assert page.has_content?("Viande")
+  assert page.has_content?("Retrait possible le")
+
     # save_and_open_screenshot
 
   click_on 'Viande'

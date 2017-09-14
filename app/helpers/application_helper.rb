@@ -19,4 +19,20 @@ module ApplicationHelper
     current_order.order_items.collect{|oi| oi.quantity}.sum
   end
 
+  def helper_delivery_day
+    if Time.now.hour >= 20
+      delivery_day = Time.now + 3.days
+    else
+      delivery_day = Time.now + 2.days
+    end
+
+    7.times do
+      if delivery_day.wday == 5
+        return delivery_day
+      else
+        delivery_day+=1.days
+      end
+    end
+  end
+
 end
