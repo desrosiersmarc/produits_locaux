@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   def home
     @categories = Category.all.map {|category| category if !category.has_parent? }.compact
   end
+
+
+
 end

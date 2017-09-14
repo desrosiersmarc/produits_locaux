@@ -24,10 +24,10 @@ en:
 
   suppliers:
     form_supplier:
-      create: "Mettre à jour"
+      create: "Update"
   categories:
     index:
       product_number:
-        zero: "aucun produit"
-        one: "1 produit"
-        other: " %{count} produits"
+        zero: "no product"
+        one: "1 product"
+        other: " %{count} products"

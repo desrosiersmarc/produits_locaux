@@ -3,10 +3,6 @@
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo.png" %>
   <% end %>
-
-  Current order id :
-  <%= current_order.id %>
-
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
       <%= render 'shared/shopping_basket', {order_items: @order_items} %>
@@ -80,5 +76,8 @@
       </div>
     </div>
   </div>
+</div>
+<div class="delivery-day">
+  <p>Retrait possible le <%= l(helper_delivery_day, format: "%A %d") %></p>
 </div>
 
