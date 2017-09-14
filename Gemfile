@@ -24,6 +24,7 @@ gem 'ancestry'
 gem "attachinary", github: "assembler/attachinary"
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
+gem 'devise-i18n'
 
 #for email
 gem "letter_opener", group: :development
