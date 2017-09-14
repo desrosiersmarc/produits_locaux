@@ -5,7 +5,11 @@
 <div class="wrapper">
   <div class="address">
     <h2>Chez Marie</h2>
-    <h2>Date de livraison : <%= @delivery_day %></h2>
+
+
+    <h2>Date de livraison : <%= l(@delivery_day, format: "%A %d") %></h2>
+
+
     <i class="fa fa-map-marker" aria-hidden="true"></i>
     15 rue Fontaines 87230 CHAMPSAC
   </div>

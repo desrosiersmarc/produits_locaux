@@ -11,7 +11,7 @@ class PagesController < ApplicationController
     7.times do
       if delivery_day.wday == 5
         # @delivery_day = delivery_day.strftime("%A %d")
-        @delivery_day = l(delivery_day, format: "%A, %d")
+        @delivery_day = delivery_day
       else
         delivery_day+=1.days
       end

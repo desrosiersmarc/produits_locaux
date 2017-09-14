@@ -25,6 +25,7 @@ gem "attachinary", github: "assembler/attachinary"
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 gem 'devise-i18n'
+gem 'rails-i18n', '5.0.3'
 
 #for email
 gem "letter_opener", group: :development
