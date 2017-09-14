@@ -1,0 +1,12 @@
+fr:
+  hello: "Hello world"
+
+  suppliers:
+    form_supplier:
+      create: "Mettre à jour"
+  categories:
+    index:
+      product_number:
+        zero: "aucun produit"
+        one: "1 produit"
+        other: " %{count} produits"
