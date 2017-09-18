@@ -17,7 +17,11 @@
     <%= product.weight %> g
   </div>
   <div class="card-add-basket">
-    <a href="#" class="btn btn-primary btn-block"> Ajouter au panier</a>
+    <%= simple_form_for order_item, remote: true do |f|  %>
+      <%= f.hidden_field :quantity, value: 1 %>
+      <%= f.hidden_field :product_id, value: product.id %>
+      <%= f.submit "Ajouter au panier", class: "btn btn-primary btn-block" %>
+    <% end %>
   </div>
 </div>
 
