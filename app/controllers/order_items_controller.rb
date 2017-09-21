@@ -3,7 +3,13 @@ class OrderItemsController < ApplicationController
 
   def create
     @order = current_order
-    @order_item = @order.order_items.new(order_item_params)
+    if  @order.products.find(params[:order_item][:product_id]).nil?
+      @order_item = @order.order_items.new(order_item_params)
+    else
+      order_item = @order.order_items.where(product_id: 5)[0]
+      order_item.quantity+=1
+      order_item.save
+    end
     @order.save
     session[:order_id] = @order.id
   end
