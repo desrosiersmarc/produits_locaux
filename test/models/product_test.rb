@@ -7,7 +7,7 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "Product number" do
-    assert_equal 2 , Product.all.count
+    assert_equal 3 , Product.all.count
   end
 
 end
