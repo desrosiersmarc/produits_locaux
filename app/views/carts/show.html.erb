@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h2>Voici votre panier</h2>
+    <h3>Votre panier</h3>
     <% @order_items.each do |oi| %>
       <div class="card-cart">
         <div class="left-card-cart">
@@ -9,11 +9,18 @@
           <%= oi.product.name %>
         </div>
         <div class="right-card-cart">
-          <i class="fa fa-minus-circle" aria-hidden="true"></i>
+          <%= simple_form_for oi, remote: true do |f|  %>
+            <%= f.hidden_field :quantity, value: oi.quantity-1 %>
+            <%= f.submit '-', class: 'btn btn-plus-minus' %>
+          <% end %>
+
           <div class="cart-quantity">
-            <%= oi.quantity %>
+            <%= render 'cart_quantity', {oi: oi} %>
           </div>
-          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+          <%= simple_form_for oi, remote: true do |f|  %>
+            <%= f.hidden_field :quantity, value: oi.quantity+1 %>
+            <%= f.submit '+', class: 'btn btn-plus-minus' %>
+          <% end %>
         </div>
       </div>
     <% end %>
