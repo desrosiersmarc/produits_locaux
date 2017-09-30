@@ -1,6 +1,6 @@
 .card-cart {
   height: 60px;
-  border: solid 1px $red;
+  border: solid 1px $blue;
   border-radius: 3px;
   margin: 5px;
   background-color: #FFF;
@@ -8,10 +8,6 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 5px;
-  i {
-    font-size: 20px;
-    color: $red;
-  }
 }
 
 .card-cart-picture {
@@ -28,15 +24,41 @@
 
 .right-card-cart {
   display: flex;
-  width: 60px;
-  border: solid 1px $red;
+  width: 80px;
+  border: solid 1px $blue;
   border-radius: 13px;
   justify-content: space-evenly;
   align-items: center;
+  margin-right: 10px;
+  color: $blue;
   }
+
+.right-card-cart:hover {
+  background-color: $gray-lighter;
+  color: $red;
+  font-weight: bolder;
+}
 
 .cart-quantity {
   width: 20px;
   text-align: center;
-  color: $red;
+  // color: $blue;
+}
+
+.btn-plus-minus {
+  background-color: $blue;
+  color: #FFF;
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+  line-height: 17px;
+  padding: 0px;
+  margin: 5px;
+}
+
+.btn-plus-minus:hover {
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: $red;
+  color: #FFF;
 }
