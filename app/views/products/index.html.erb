@@ -11,7 +11,7 @@
           <p>Catégorie : <%= product.category.name %></p>
           <p>Fournisseur : <%= product.supplier.name %></p>
         </div>
-          <%= render 'categories/product_card', {product: product} %>
+          <%= render 'categories/product_card', {product: product, order_item: @order_item} %>
       </div>
     <% end %>
 
