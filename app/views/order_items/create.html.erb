@@ -1,2 +1,15 @@
-<h1>OrderItems#create</h1>
-<p>Find me in app/views/order_items/create.html.erb</p>
+<div class="container">
+  <div class="row">
+    <p>Votre produit a bien été ajouté à votre panier</p>
+    <%= link_to root_path do %>
+      <p class='btn btn-primary'>
+        continuer mes achats
+      </p>
+    <% end %>
+    <%= link_to cart_path do %>
+      <p class='btn btn-primary'>
+        voir mon panier
+      </p>
+    <% end %>
+  </div>
+</div>
