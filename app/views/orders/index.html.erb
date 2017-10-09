@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <h3>Liste des commandes</h3>
+    <p>En attentes</p>
+      <% @orders_validated.each do |order| %>
+        <div>
+          <p><%= order.id %></p>
+          <p>Nom : <%= order.user.lastname %></p>
+          <p>Téléphone : <%= order.user.mobil_phone %></p>
+
+        </div>
+      <% end %>
+    <p>Prêtes</p>
+      <% @orders_ready.each do |order| %>
+        <div>
+          <p><%= order.id %></p>
+        </div>
+      <% end %>
+
+  </div>
+</dic>

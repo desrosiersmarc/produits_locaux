@@ -30,7 +30,7 @@
                 <% end %>
               </li>
               <% if current_user.admin %>
-                <li><a href="#"><i class="fa fa-list-ol" aria-hidden="true"></i> Gestion des commandes</a></li>
+                <li><%= render 'shared/orders' %></li>
                 <li><%= render 'shared/products' %></li>
                 <li><%= render 'shared/categories' %></li>
                 <li><%= render 'shared/suppliers' %></li>
@@ -63,7 +63,7 @@
               <% end %>
             </li>
             <% if current_user.admin %>
-              <li><a href="#">Gestion des commandes</a></li>
+              <li><%= render 'shared/orders' %></li>
               <li><%= render 'shared/products' %></li>
               <li><%= render 'shared/suppliers' %></li>
               <li><%= render 'shared/categories' %></li>
