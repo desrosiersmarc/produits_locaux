@@ -1,8 +1,15 @@
 class OrdersController < ApplicationController
-  skip_before_action :authenticate_user!
+  before_action :find_order
 
   def update
-    current_order.order_status_id+=1
+    @order.order_status_id+=1
+    @order.save
+    session[:order_id] = nil
+  end
+
+private
+  def find_order
+    @order = Order.find(params[:id])
   end
 
 end

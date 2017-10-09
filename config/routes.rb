@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :order_items, only: [:create, :update, :destroy]
 
-  resources :order, only: [:update]
+  resources :orders, only: [:update]
 
   get '/categories/*id' => 'categories#show'
 end
