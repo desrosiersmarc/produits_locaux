@@ -15,7 +15,9 @@
       </p>
     </div>
     <div class="order-cards-right">
-      <i class="fa fa-search-plus" aria-hidden="true"></i>
+      <%= link_to order_path(order) do %>
+        <i class="fa fa-search-plus" aria-hidden="true"></i>
+      <% end %>
     </div>
   </div>
 </div>
