@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <h3>Liste des commandes</h3>
+    <div class="status-title">
+      <p>En attentes</p>
+    </div>
+      <% @orders_validated.each do |order| %>
+        <%= render 'order_card', {order: order} %>
+      <% end %>
+  <div class="status-title">
+    <p>Prêtes</p>
+  </div>
+      <% @orders_ready.each do |order| %>
+        <%= render 'order_card', {order: order} %>
+      <% end %>
+
+  </div>
+</dic>
