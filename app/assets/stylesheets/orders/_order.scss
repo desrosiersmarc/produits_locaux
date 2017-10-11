@@ -50,3 +50,12 @@
   width: 95%;
   padding-left: 10px;
 }
+
+.orders-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-order-action {
+  width: 45%;
+}
