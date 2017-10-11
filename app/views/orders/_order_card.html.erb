@@ -1,0 +1,21 @@
+<div class="order-cards">
+  <div class="order-cards-number">
+    <%= order.id %>
+  </div>
+  <div class="order-cards-informations">
+    <div class="order-cards-left">
+      <i class="fa fa-id-card-o" aria-hidden="true"></i>
+      <%= order.user.lastname %>
+
+      <i class="fa fa-mobile" aria-hidden="true"></i>
+      <%= order.user.mobil_phone %>
+
+      <p>
+        <%= t('.product_number', count: (order.order_items.map{|oi| oi.quantity}.sum) ) %>
+      </p>
+    </div>
+    <div class="order-cards-right">
+      <i class="fa fa-search-plus" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>

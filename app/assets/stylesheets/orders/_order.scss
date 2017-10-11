@@ -1,0 +1,52 @@
+.status-title {
+  background-color: $blue;
+  height: 40px;
+  border-radius: 3px;
+  line-height: 40px;
+  color: #FFF;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.order-cards {
+  background-color: #FFF;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 65px;
+  display: flex;
+}
+
+.order-cards-right {
+  padding-right: 10px;
+  font-size: 30px;
+  i {
+    color: $red;
+  }
+}
+
+.order-cards-left {
+  i {
+    color: $blue;
+  }
+
+}
+
+.order-cards-number {
+  height: 65px;
+  background-color: $red;
+  color: #FFF;
+  line-height: 65px;
+  width: 40px;
+  text-align: center;
+  border-radius: 3px 0 0 3px;
+}
+
+.order-cards-informations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  padding-left: 10px;
+}

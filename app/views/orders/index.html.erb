@@ -1,20 +1,17 @@
 <div class="container">
   <div class="row">
     <h3>Liste des commandes</h3>
-    <p>En attentes</p>
+    <div class="status-title">
+      <p>En attentes</p>
+    </div>
       <% @orders_validated.each do |order| %>
-        <div>
-          <p><%= order.id %></p>
-          <p>Nom : <%= order.user.lastname %></p>
-          <p>Téléphone : <%= order.user.mobil_phone %></p>
-
-        </div>
+        <%= render 'order_card', {order: order} %>
       <% end %>
+  <div class="status-title">
     <p>Prêtes</p>
+  </div>
       <% @orders_ready.each do |order| %>
-        <div>
-          <p><%= order.id %></p>
-        </div>
+        <%= render 'order_card', {order: order} %>
       <% end %>
 
   </div>
