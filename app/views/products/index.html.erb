@@ -1,24 +1,32 @@
 <div class="container">
   <div class="row">
     <h2>Liste des produits</h2>
-    <% @products.each do |product| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card-admin-informations">
-          <%= link_to edit_product_path(product) do %>
-            <i class="fa fa-pencil" aria-hidden="true"></i>
-          <% end %>
-          <%= product.name %>
-          <p>Catégorie : <%= product.category.name %></p>
-          <p>Fournisseur : <%= product.supplier.name %></p>
+    <% @categories_list.each do |category| %>
+      <div class="col-xs-12">
+        <div class="category-title">
+          <h3>
+            <%= category.name %>
+          </h3>
         </div>
-          <%= render 'categories/product_card', {product: product, order_item: @order_item} %>
       </div>
-    <% end %>
-
-      <%= link_to new_product_path do %>
-        <div class="create-supplier">
-          +
+      <% @products.where(category: category).each do |product| %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="card-admin-informations">
+            <%= link_to edit_product_path(product) do %>
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            <% end %>
+            <%= product.name %> | <%= product.id %>
+            <p>Catégorie : <%= product.category.name %></p>
+            <p>Fournisseur : <%= product.supplier.name %></p>
+          </div>
+            <%= render 'categories/product_card', {product: product, order_item: @order_item} %>
         </div>
       <% end %>
+    <% end %>
+    <%= link_to new_product_path do %>
+      <div class="create-supplier">
+        +
+      </div>
+    <% end %>
   </div>
 </div>
