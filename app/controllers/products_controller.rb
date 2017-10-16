@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
   before_action :supplier_list, only: [:new, :create, :edit]
   before_action :find_product, only: [:edit, :update]
   def index
-    @products = Product.all
+    @products = Product.all.order("category_id")
+    @categories_list = Product.all.map {|product| product.category}.uniq
     @order_item = current_order.order_items.new
   end
 
