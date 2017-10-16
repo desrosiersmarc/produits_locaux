@@ -7,7 +7,7 @@
           <%= link_to edit_product_path(product) do %>
             <i class="fa fa-pencil" aria-hidden="true"></i>
           <% end %>
-          <%= product.name %>
+          <%= product.name %> | <%= product.id %>
           <p>Catégorie : <%= product.category.name %></p>
           <p>Fournisseur : <%= product.supplier.name %></p>
         </div>
