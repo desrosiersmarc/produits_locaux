@@ -3,4 +3,9 @@ class Category < ApplicationRecord
   has_ancestry
 
   validates :name, presence: true, length: { maximum: 20, minimum: 2, too_short: "Il faut plus de lettres", too_long:"Trop, c'est trop... ;/"}
+
+  def active_products
+    self.products.where(active: true)
+  end
+
 end
