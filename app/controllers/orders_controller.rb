@@ -14,6 +14,7 @@ class OrdersController < ApplicationController
 
   def update
     @order.order_status_id+=1
+    @order.delivery_date = session[:delivery_day]
     @order.user = current_user
     @order.save
     session[:order_id] = nil
