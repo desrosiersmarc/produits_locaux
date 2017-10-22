@@ -7,14 +7,17 @@
 
         <i class="fa fa-mobile" aria-hidden="true"></i>
         <%= @order.user.mobil_phone %>
-
         <p>
-          <%= t('.product_number', count: (@order.order_items.map{|oi| oi.quantity}.sum) ) %>
-        </p>
           <i class="fa fa-calendar" aria-hidden="true"></i>
            <%= @order.created_at.strftime('%v') %>
           <i class="fa fa-shopping-bag" aria-hidden="true"></i>
           <%= @order.delivery_date.strftime('%v') %>
+        </p>
+      </div>
+      <div class="order-information-right">
+        <p>
+          <%= t('.product_number', count: (@order.order_items.map{|oi| oi.quantity}.sum) ) %>
+        </p>
       </div>
     </div>
     <% @order.order_items.each do |oi| %>
