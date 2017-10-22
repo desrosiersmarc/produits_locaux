@@ -16,3 +16,9 @@ fr:
         zero: "aucun produit"
         one: "1 produit"
         other: " %{count} produits"
+    show:
+      product_number:
+        zero: "aucun produit"
+        one: "1 produit"
+        other: " %{count} produits"
+

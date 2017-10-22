@@ -13,6 +13,10 @@
       <p>
         <%= t('.product_number', count: (order.order_items.map{|oi| oi.quantity}.sum) ) %>
       </p>
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+         <%= order.created_at.strftime('%v') %>
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        <%= order.delivery_date.strftime('%v') %>
     </div>
     <div class="order-cards-right">
       <%= link_to order_path(order) do %>

@@ -77,7 +77,8 @@
     </div>
   </div>
 </div>
-<div class="delivery-day">
-  <p>Retrait possible le <%= l(helper_delivery_day, format: "%A %d") %></p>
-</div>
-
+<% if !current_user.admin %>
+  <div class="delivery-day">
+    <p>Retrait possible le <%= l(helper_delivery_day, format: "%A %d") %></p>
+  </div>
+<% end %>

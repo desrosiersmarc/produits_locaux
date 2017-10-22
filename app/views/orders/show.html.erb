@@ -1,5 +1,25 @@
 <div class="container">
   <div class="row">
+    <div class="card-cart">
+      <div class="order-cards-left">
+        <i class="fa fa-id-card-o" aria-hidden="true"></i>
+        <%= @order.user.lastname %>
+
+        <i class="fa fa-mobile" aria-hidden="true"></i>
+        <%= @order.user.mobil_phone %>
+        <p>
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+           <%= @order.created_at.strftime('%v') %>
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          <%= @order.delivery_date.strftime('%v') %>
+        </p>
+      </div>
+      <div class="order-information-right">
+        <p>
+          <%= t('.product_number', count: (@order.order_items.map{|oi| oi.quantity}.sum) ) %>
+        </p>
+      </div>
+    </div>
     <% @order.order_items.each do |oi| %>
       <div class="card-cart">
         <div class="left-card-cart">
@@ -15,12 +35,20 @@
       </div>
     <% end %>
     <div class="orders-actions">
-      <p class='btn btn-primary btn-order-action'>
-        commande prise en compte
-      </p>
-      <p class='btn btn-success btn-order-action'>
-        commande prête
-      </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <p class='btn btn-primary btn-block margin-bottom-10px'>
+            commande prise en compte
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <p class='btn btn-success btn-block'>
+            commande prête
+          </p>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </div>

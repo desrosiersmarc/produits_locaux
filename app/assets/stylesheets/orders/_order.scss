@@ -11,10 +11,10 @@
 .order-cards {
   background-color: #FFF;
   border-radius: 3px;
-  font-weight: bold;
+  // font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 65px;
+  height: 90px;
   display: flex;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .order-cards-number {
-  height: 65px;
+  height: 90wpx;
   background-color: $red;
   color: #FFF;
   line-height: 65px;
@@ -56,6 +56,14 @@
   justify-content: space-between;
 }
 
-.btn-order-action {
-  width: 45%;
+.margin-bottom-10px {
+  margin-bottom: 10px;
+}
+
+.order-information-right {
+  height: 100%;
+  width: 65px;
+  text-align: center;
+  background-color: $red;
+  color: #FFF;
 }
