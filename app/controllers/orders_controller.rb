@@ -4,6 +4,8 @@ class OrdersController < ApplicationController
   def index
     @orders_validated = Order.all.where(order_status_id: 2)
     @orders_ready = Order.all.where(order_status_id: 3)
+    @orders_in_preparation = Order.all.where(order_status_id: 3)
+    @orders_cancelled = Order.all.where(order_status_id: 6)
 
   end
 
