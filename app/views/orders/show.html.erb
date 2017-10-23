@@ -34,21 +34,38 @@
         </div>
       </div>
     <% end %>
-    <div class="orders-actions">
+  </div>
+  <div class="orders-actions">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <p class='btn btn-primary btn-block margin-bottom-10px'>
-            commande prise en compte
-          </p>
+        <div class="col-xs-12 col-sm-3">
+          <%= link_to orders_path do %>
+            <p class='btn btn-danger btn-block margin-bottom-10px'>
+              Retour
+            </p>
+          <% end %>
         </div>
-        <div class="col-xs-12 col-sm-6">
-          <p class='btn btn-success btn-block'>
-            commande prête
-          </p>
+        <div class="col-xs-12 col-sm-3">
+          <% if @order.order_status_id <=2 %>
+            <%= simple_form_for @order do |f| %>
+              <%= f.hidden_field :order_status, value: 3 %>
+              <%= f.submit 'Commande prise en compte', class: 'btn btn-primary btn-block margin-bottom-10px' %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <%= simple_form_for @order do |f| %>
+            <%= f.hidden_field :order_status, value: 4 %>
+            <%= f.submit 'Commande prête', class: 'btn btn-success btn-block margin-bottom-10px' %>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <%= simple_form_for @order do |f| %>
+            <%= f.hidden_field :order_status, value: 6 %>
+            <%= f.submit 'Annuler la commande', class: 'btn btn-danger btn-block margin-bottom-10px' %>
+          <% end %>
         </div>
       </div>
-    </div>
     </div>
   </div>
 </div>
