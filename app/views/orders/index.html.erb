@@ -1,28 +1,28 @@
 <div class="container">
   <div class="row">
     <h3>Liste des commandes</h3>
-    <div class="status-title">
-      <p>En attente(s)</p>
+    <div class="status-title margin-bottom-10px">
+      <p>A traiter</p>
     </div>
     <% @orders_validated.each do |order| %>
       <%= render 'order_card', {order: order} %>
     <% end %>
-    <div class="status-title">
+    <div class="status-title margin-bottom-10px">
       <p>En préparation</p>
     </div>
     <% @orders_in_preparation.each do |order| %>
       <%= render 'order_card', {order: order} %>
     <% end %>
-    <div class="status-title">
+    <div class="status-title margin-bottom-10px">
       <p>Prête(s)</p>
     </div>
     <% @orders_ready.each do |order| %>
       <%= render 'order_card', {order: order} %>
     <% end %>
-    <div class="status-title">
+    <div class="status-title margin-bottom-10px">
       <p>Annulée(s)</p>
     </div>
-    <% @orders_ready.each do |order| %>
+    <% @orders_cancelled.each do |order| %>
       <%= render 'order_card', {order: order} %>
     <% end %>
   </div>
