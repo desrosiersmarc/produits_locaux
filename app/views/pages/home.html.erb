@@ -2,26 +2,7 @@
 
 <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('marie.jpg') %>">
 </div>
-<div class="wrapper">
-  <div class="address">
-    <h2>Chez Marie</h2>
-    <i class="fa fa-map-marker" aria-hidden="true"></i>
-    15 rue Fontaines 87230 CHAMPSAC
-  </div>
-  <div class="hours">
-    <p><i class="fa fa-clock-o" aria-hidden="true"></i> du mardi au vendredi :</p>
-    <p>7h30 à 13h30 - 16h à 19h30</p>
-  </div>
-    <div class="hours">
-    <p><i class="fa fa-clock-o" aria-hidden="true"></i> samedi et dimanche :</p>
-    <p>7h30 à 12h30</p>
-  </div>
-  <div class="phone">
-    <a href="tel:0555785762" class="btn btn-danger">
-      05.55.78.57.62
-    </a>
-  </div>
-</div>
+<%= render 'contact_informations' %>
 <%= link_to category_path(@categories[2]) do %>
   <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('fruits2.jpg') %>">
     <h1>Fruits et Légumes</h1>
