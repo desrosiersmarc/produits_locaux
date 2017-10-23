@@ -14,11 +14,15 @@
           <% end %>
         <% end %>
 
-        <%= arranged_tree_as_list(@category.children.arrange) do |category| %>
-          <%= link_to(category_path(category), class: "btn btn-danger") do %>
-            <%= category.name %> (<%= category.active_products.count %>)
+        <!-- <div class="row"> -->
+          <%= arranged_tree_as_list(@category.children.arrange) do |category| %>
+            <div class="col-xs-12 col-sm-4">
+              <%= link_to(category_path(category), class: "btn btn-danger btn-block margin-bottom-10px") do %>
+                <%= category.name %> (<%= category.active_products.count %>)
+              <% end %>
+            </div>
           <% end %>
-        <% end %>
+        <!-- </div> -->
 
       </div>
 
