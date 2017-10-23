@@ -33,7 +33,6 @@ module ApplicationHelper
       else
         delivery_day+=1.days
         session[:delivery_day] = delivery_day
-        return delivery_day
       end
     end
   end
