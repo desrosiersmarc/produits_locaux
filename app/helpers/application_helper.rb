@@ -28,12 +28,11 @@ module ApplicationHelper
 
     7.times do
       if delivery_day.wday == 5
-        session[:delivery_day] = delivery_day + 4
+        session[:delivery_day] = delivery_day
         return delivery_day
       else
         delivery_day+=1.days
         session[:delivery_day] = delivery_day
-        return delivery_day
       end
     end
   end
