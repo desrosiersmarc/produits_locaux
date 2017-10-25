@@ -159,16 +159,17 @@
 }
 
 .delivery-day {
-  height: 60px;
-  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  // width: 130px;
   background-color: $red;
   color: #FFF;
   text-align: center;
-  position: fixed;
-  padding: 6px;
-  margin: 6px;
-  right: 0px;
+  // position: fixed;
+  // padding: 6px;
+  // margin: 6px;
+  // right: 0px;
   box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-  border-radius: 3px;
-  z-index: 1;
+  // border-radius: 3px;
+  // z-index: 1;
 }
