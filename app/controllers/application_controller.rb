@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_order
   before_action :authenticate_user!
-
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def configure_permitted_parameters
     #for additional fields in app/views/devis/registrations/new.html.erb
