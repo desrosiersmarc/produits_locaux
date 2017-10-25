@@ -1,12 +1,6 @@
 class UsersController < ApplicationController
   before_action :find_user
 
-def create
-  User.new(@user)
-  raise
-end
-
-
 private
   def find_user
     @user = User.find(params[:id])
