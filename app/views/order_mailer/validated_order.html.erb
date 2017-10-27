@@ -1,7 +1,32 @@
 <%= render 'user_mailer/header' %>
 <p>Bonjour <%= @user.firstname.capitalize %>,</p>
-<p>Nous vous confirmons la prise en compte de votre commande.</p>
-<p>Dés qu'elle sera prête, nous vous ferons parvenir un nouvel email.</p>
+<p>Nous vous confirmons la prise en compte de votre commande ci-dessous :</p>
+
+<table>
+  <tr>
+    <th style="text-align: left; background-color: #aaa">
+     Produits
+    </th>
+    <th style="background-color: #aaa">
+      Quantité
+    </th>
+  </tr>
+  <% @user.orders.last.order_items.each do |oi| %>
+  <tr>
+    <td style="background-color: #ddd">
+      <%= oi.product.name %>
+    </td>
+    <td style="text-align: center; background-color: #ddd">
+      <%= oi.quantity %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<hr>
+<p>
+  Votre commande sera disponible le
+<%= l(@user.orders.last.delivery_date, format: "%A %d %B") %> à partir de 10h.
+</p>
 
 <p>Bonne journée.</p>
 
