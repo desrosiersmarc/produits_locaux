@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
       @order.user = current_user
       session[:order_id] = nil
       @order.save
-      # redirect_to order_path
+      OrderMailer.validated_order(current_user).deliver_now
     else
       @order.order_status_id = params[:order][:order_status]
       @order.save
