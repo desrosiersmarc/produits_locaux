@@ -5,6 +5,8 @@ class PagesController < ApplicationController
     @categories = Category.all.map {|category| category if !category.has_parent? }.compact
   end
 
-
+  def my_orders
+    @orders = Order.all.where(user: current_user)
+  end
 
 end

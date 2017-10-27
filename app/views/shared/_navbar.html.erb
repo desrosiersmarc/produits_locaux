@@ -15,11 +15,7 @@
             <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
             <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
               <li> <%= render 'shared/edit_profil' %></li>
-              <li>
-                <%= link_to "#" do %>
-                  <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
-                <% end %>
-              </li>
+              <li><%= render 'shared/my_orders' %></li>
               <li>
                 <%= link_to destroy_user_session_path, method: :delete do %>
                   <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
@@ -52,7 +48,7 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <% if user_signed_in? %>
             <li><%= render 'shared/edit_profil' %></li>
-            <li><a href="#">Mes commandes</a></li>
+            <li><%= render 'shared/my_orders' %></li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
