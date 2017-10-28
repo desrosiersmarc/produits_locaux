@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def my_orders
-    @orders = Order.all.where(user: current_user)
+    @orders = Order.all.where(user: current_user).order("order_status_id")
   end
 
 end
