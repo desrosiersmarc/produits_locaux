@@ -1,0 +1,30 @@
+.order-card {
+  border: 1px solid $blue;
+  margin: 10px 10px 20px 10px;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
+
+.order-card-items {
+  display: flex;
+  padding: 15px 5px 15px 0px;
+
+}
+
+.order-card-product {
+
+}
+
+.order-card-quantity {
+  width: 20px;
+
+}
+
+.order-card-title {
+  border-bottom: 1px solid $blue;
+  margin: -5px;
+  padding: 10px;
+  background-color: $blue;
+  color: #FFF;
+}
