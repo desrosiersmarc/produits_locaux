@@ -1,0 +1,26 @@
+<div class="delivery-day-area">
+
+</div>
+<div class="container">
+  <div class="row">
+    <h4>Mes commandes</h4>
+    <% @orders.each do |order| %>
+      <div class="order-card">
+        <div class="order-card-title">
+          <%= l(order.delivery_date, format: '%A %d %B') %> | <%= order.order_status.name %>
+        </div>
+        <% order.order_items.each do |oi| %>
+          <div class="order-card-items">
+            <div class="order-card-quantity">
+              <%= oi.quantity %>
+            </div>
+            <div class="order-card-product">
+              <%= oi.product.name %>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :update]
 
   get '/categories/*id' => 'categories#show'
+
+  get 'my_orders', to: 'pages#my_orders'
 end
