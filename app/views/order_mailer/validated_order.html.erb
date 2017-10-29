@@ -11,7 +11,7 @@
       Quantité
     </th>
   </tr>
-  <% @user.orders.last.order_items.each do |oi| %>
+  <% @order_items.each do |oi| %>
   <tr>
     <td style="background-color: #ddd">
       <%= oi.product.name %>

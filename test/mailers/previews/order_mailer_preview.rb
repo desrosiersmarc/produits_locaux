@@ -2,6 +2,8 @@
 class OrderMailerPreview < ActionMailer::Preview
 
   def validated_order()
-    OrderMailer.validated_order(User.last)
+    @user = User.last
+    @order_items = @user.orders.last.order_items.where('quantity >0')
+    OrderMailer.validated_order(@user)
   end
 end
