@@ -19,6 +19,13 @@ class OrderItemsController < ApplicationController
     @order_item = @order.order_items.find(params[:id])
     @order_item.update_attributes(order_item_params)
     @order_items = @order.order_items
+    if @order_item.save
+      respond_to do |format|
+        format.html {redirect_to cart_path}
+        format.js
+      end
+    end
+
   end
 
   def destroy
