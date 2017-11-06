@@ -10,20 +10,19 @@
           </div>
           <%= oi.product.name %>
         </div>
-        <div class="right-card-cart">
-          <%= simple_form_for oi, remote: true do |f|  %>
-            <%= f.hidden_field :quantity, value: oi.quantity-1 %>
-            <%= f.submit '-', class: 'btn btn-plus-minus' %>
-          <% end %>
-
-          <div class="cart-quantity">
-            <%= render 'cart_quantity', {oi: oi} %>
+          <div class="right-card-cart">
+            <%= simple_form_for oi,remote: false do |f|  %>
+              <%= f.hidden_field :quantity, value: oi.quantity-1 %>
+              <%= f.submit '-', class: 'btn btn-plus-minus' %>
+            <% end %>
+            <div class="cart-quantity" id=<%= "oi#{oi.id}" %>>
+              <%= oi.quantity %>
+            </div>
+            <%= simple_form_for oi,remote: false do |f|  %>
+              <%= f.hidden_field :quantity, value: oi.quantity+1 %>
+              <%= f.submit '+', class: 'btn btn-plus-minus' %>
+            <% end %>
           </div>
-          <%= simple_form_for oi, remote: true do |f|  %>
-            <%= f.hidden_field :quantity, value: oi.quantity+1 %>
-            <%= f.submit '+', class: 'btn btn-plus-minus' %>
-          <% end %>
-        </div>
       </div>
     <% end %>
     <div class="cart-validation-button">
