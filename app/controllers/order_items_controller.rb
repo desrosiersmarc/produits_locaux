@@ -11,6 +11,7 @@ class OrderItemsController < ApplicationController
       order_item.save
     end
     @order.save
+
     session[:order_id] = @order.id
   end
 
@@ -19,6 +20,8 @@ class OrderItemsController < ApplicationController
     @order_item = @order.order_items.find(params[:id])
     @order_item.update_attributes(order_item_params)
     @order_items = @order.order_items
+                          .where('quantity > 0')
+                          .order("created_at")
     if @order_item.save
       respond_to do |format|
         format.html {redirect_to cart_path}
