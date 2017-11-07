@@ -1,5 +1,1 @@
-<% if @order.errors.any? || @order_item.errors.any? %>
-  alert("not valid.")
-<% else %>
-  $(".shopping-basket").html("<%= escape_javascript(render 'shared/shopping_basket') %>")
-<% end %>
+$(".shopping-basket").html("<%= escape_javascript(render 'shared/shopping_basket') %>");

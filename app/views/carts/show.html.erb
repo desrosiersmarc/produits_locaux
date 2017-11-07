@@ -1,30 +1,9 @@
-<div class="delivery-day-area">
-</div>
 <div class="container">
   <div class="row">
     <h3>Votre panier</h3>
-    <% @order_items.each do |oi| %>
-      <div class="card-cart">
-        <div class="left-card-cart">
-          <div class="card-cart-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= helper_picture_url(oi.product)%>)">
-          </div>
-          <%= oi.product.name %>
-        </div>
-          <div class="right-card-cart">
-            <%= simple_form_for oi,remote: false do |f|  %>
-              <%= f.hidden_field :quantity, value: oi.quantity-1 %>
-              <%= f.submit '-', class: 'btn btn-plus-minus' %>
-            <% end %>
-            <div class="cart-quantity" id=<%= "oi#{oi.id}" %>>
-              <%= oi.quantity %>
-            </div>
-            <%= simple_form_for oi,remote: false do |f|  %>
-              <%= f.hidden_field :quantity, value: oi.quantity+1 %>
-              <%= f.submit '+', class: 'btn btn-plus-minus' %>
-            <% end %>
-          </div>
-      </div>
-    <% end %>
+    <div id="cart-list">
+      <%= render 'cart_quantity' %>
+    </div>
     <div class="cart-validation-button">
       <% if current_order.id.nil? %>
         <%= link_to root_path do %>

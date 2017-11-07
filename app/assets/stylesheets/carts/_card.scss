@@ -23,12 +23,9 @@
 }
 
 .right-card-cart {
-  display: flex;
   width: 80px;
   border: solid 1px $blue;
   border-radius: 13px;
-  justify-content: space-evenly;
-  align-items: center;
   margin-right: 10px;
   color: $blue;
   }
@@ -43,6 +40,12 @@
   width: 20px;
   text-align: center;
   // color: $blue;
+}
+
+.cart-quantity-modification {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .btn-plus-minus {
