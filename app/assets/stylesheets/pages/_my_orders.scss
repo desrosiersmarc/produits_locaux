@@ -4,6 +4,7 @@
   padding: 5px;
   border-radius: 3px;
   box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  background-color: #FFF;
 }
 
 .order-card-items {
@@ -25,6 +26,34 @@
   border-bottom: 1px solid $blue;
   margin: -5px;
   padding: 10px;
-  background-color: $blue;
   color: #FFF;
+  display: flex;
+}
+
+.order-card-title-bkcolor-1 {
+  background-color: $blue;
+}
+.order-card-title-bkcolor-2 {
+  background-color: $orange;
+}
+.order-card-title-bkcolor-3 {
+  background-color: $blue;
+}
+.order-card-title-bkcolor-4 {
+  background-color: $green;
+}
+.order-card-title-bkcolor-5 {
+  background-color: $gray;
+}
+.order-card-title-bkcolor-6 {
+  background-color: $red;
+}
+
+.order-id {
+  height: 42px;
+  margin: -10px 10px -10px -10px;
+  line-height: 42px;
+  width: 37px;
+  text-align: center;
+  background-color: $gray-light;
 }
