@@ -3,8 +3,12 @@
     <h4>Mes commandes</h4>
     <% @orders.each do |order| %>
       <div class="order-card">
-        <div class="order-card-title">
-          <%= l(order.delivery_date, format: '%A %d %B') %> | <%= order.order_status.name %>
+        <div class='order-card-title order-card-title-bkcolor-<%= order.order_status_id %> ' >
+          <div class="order-id">
+            <%= order.id  %>
+          </div>
+          <%= l(order.delivery_date, format: '%A %d %B') %> -
+          <%= order.order_status.name %>
         </div>
         <% order.order_items.each do |oi| %>
           <div class="order-card-items">
