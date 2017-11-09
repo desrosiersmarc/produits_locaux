@@ -2,10 +2,11 @@ class OrdersController < ApplicationController
   before_action :find_order, only: [:update, :show]
 
   def index
-    @orders_validated = Order.all.where(order_status_id: 2)
-    @orders_in_preparation = Order.all.where(order_status_id: 3)
-    @orders_ready = Order.all.where(order_status_id: 4)
-    @orders_cancelled = Order.all.where(order_status_id: 6)
+    @orders = Order.all.where("delivery_date > ?", Time.now - 10.day)
+    @orders_validated = @orders.where(order_status_id: 2)
+    @orders_in_preparation = @orders.where(order_status_id: 3)
+    @orders_ready = @orders.where(order_status_id: 4)
+    @orders_cancelled = @orders.where(order_status_id: 6)
   end
 
   def show
