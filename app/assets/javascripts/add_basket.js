@@ -4,6 +4,6 @@ $(document).ready(function(){
     var idToHide = '#' + productName[0].id;
     console.log(idToHide);
     $(idToHide).hide();
-    $(idToHide).fadeIn(3000);
+    $(idToHide).fadeIn(5000);
   });
 });

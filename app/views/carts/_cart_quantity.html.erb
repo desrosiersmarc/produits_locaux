@@ -22,3 +22,18 @@
     </div>
   </div>
 <% end %>
+<div class="cart-validation-button">
+  <% if current_order.id.nil? || order_items_count == 0 %>
+    <%= link_to root_path do %>
+      <p class="btn btn-danger btn-block">
+        Votre panier est vide
+      </p>
+    <% end %>
+  <% else %>
+    <%= link_to order_path(current_order.id), method: "patch" do %>
+      <p class="btn btn-danger btn-block">
+        Valider votre panier
+      </p>
+    <% end %>
+  <% end %>
+</div>
