@@ -23,6 +23,9 @@ class OrdersController < ApplicationController
       OrderMailer.validated_order(current_user).deliver_now
     else
       @order.order_status_id = params[:order][:order_status]
+      if @order.order_status_id == 4
+        OrderMailer.ready_order(current_user).deliver_now
+      end
       @order.save
       redirect_to orders_path
     end

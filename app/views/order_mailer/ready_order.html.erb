@@ -1,0 +1,33 @@
+<%= render 'user_mailer/header' %>
+<p>Bonjour <%= @user.firstname.capitalize %>,</p>
+<p>Nous vous informons que votre commande ci-dessous est prête :</p>
+
+<table>
+  <tr>
+    <th style="text-align: left; background-color: #aaa">
+     Produits
+    </th>
+    <th style="background-color: #aaa">
+      Quantité
+    </th>
+  </tr>
+  <% @order_items.each do |oi| %>
+  <tr>
+    <td style="background-color: #ddd">
+      <%= oi.product.name %>
+    </td>
+    <td style="text-align: center; background-color: #ddd">
+      <%= oi.quantity %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<hr>
+<p>
+  Vous pouvez venir la chercher quand vous le souhaitez.
+</p>
+
+<p>Bonne journée.</p>
+
+<p>Marie</p>
+<%= render 'user_mailer/footer' %>
