@@ -2,7 +2,11 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @categories = Category.all.map {|category| category if !category.has_parent? }.compact
+    @vegetables = Category.find(3)
+    @meats = Category.find(1)
+    @breds = Category.find(4)
+    @pastries = Category.find(2)
+    @takeaway = Category.find(5)
   end
 
   def my_orders
