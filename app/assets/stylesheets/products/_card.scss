@@ -90,7 +90,19 @@
   border: 1px $red solid;
   i {
     color: $red;
+    font-size: 20px;
   }
   margin-bottom: -11px;
 
+}
+
+.toggle-on-off {
+  i {
+    color: $blue;
+    font-size: 20px;
+  }
+}
+
+.product-card-line-one {
+  display: flex;
 }
