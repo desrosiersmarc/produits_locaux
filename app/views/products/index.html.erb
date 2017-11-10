@@ -12,10 +12,19 @@
       <% @products.where(category: category).each do |product| %>
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-admin-informations">
-            <%= link_to edit_product_path(product) do %>
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            <% end %>
-            <%= product.name %> | <%= product.id %>
+            <div class="product-card-line-one">
+              <%= link_to edit_product_path(product) do %>
+                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+              <% end %>
+                <div class="toggle-on-off">
+                  <% if product.active %>
+                    <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                  <% else %>
+                    <i class="fa fa-toggle-off" aria-hidden="true"></i>
+                  <% end %>
+                </div>
+              <%= product.name %>
+            </div>
             <p>Catégorie : <%= product.category.name %></p>
             <p>Fournisseur : <%= product.supplier.name %></p>
           </div>
