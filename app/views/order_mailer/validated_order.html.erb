@@ -1,6 +1,6 @@
 <%= render 'user_mailer/header' %>
 <p>Bonjour <%= @user.firstname.capitalize %>,</p>
-<p>Nous vous confirmons la prise en compte de votre commande ci-dessous :</p>
+<p>Nous vous confirmons la prise en compte de votre commande n°<%= @order.id %></p>
 
 <table>
   <tr>
