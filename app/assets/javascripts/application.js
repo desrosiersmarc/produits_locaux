@@ -6,3 +6,4 @@
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require add_basket
+//= require move_delivery_date_div

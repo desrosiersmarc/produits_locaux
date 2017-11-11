@@ -159,23 +159,32 @@
 }
 
 .delivery-day {
-  height: 30px;
-  line-height: 30px;
+  // height: 30px;
+  // line-height: 30px;
   // width: 130px;
   background-color: $red;
   color: #FFF;
   text-align: center;
   position: fixed;
-  top: 70px;
   width: 100%;
+  top: 70px;
   // padding: 6px;
   // margin: 6px;
   // right: 0px;
   box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
   // border-radius: 3px;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delivery-day-top {
+  top: 0px;
+  transition: top 1s;
 }
 
 .delivery-day-area {
-  height: 30px;
+  // height: 30px;
+  color: #EDEDED;
 }
