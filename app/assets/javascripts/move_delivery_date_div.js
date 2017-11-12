@@ -1,9 +1,11 @@
+var divDay = document.querySelector('.delivery-day');
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
-    console.log(scroll);
-  if (scroll > 70) {
-    $('.delivery-day').addClass('delivery-day-top');
-  } else {
-    $('.delivery-day').removeClass('delivery-day-top');
-  }
+    if (scroll < 71) {
+      delta = 70 - scroll;
+      deltaPx = delta + "px";
+      if (delta > 0) {
+        divDay.style.top = deltaPx;
+      }
+    }
 });
