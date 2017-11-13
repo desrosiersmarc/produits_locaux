@@ -37,4 +37,8 @@ module ApplicationHelper
     end
   end
 
+  def order_items_to_display(order)
+    OrderItem.all.where(order: order).where('quantity > 0')
+  end
+
 end

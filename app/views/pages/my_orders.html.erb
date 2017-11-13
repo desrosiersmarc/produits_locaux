@@ -10,7 +10,7 @@
           <%= l(order.delivery_date, format: '%A %d %B') %> -
           <%= order.order_status.name %>
         </div>
-        <% order.order_items.each do |oi| %>
+        <% order_items_to_display(order).each do |oi| %>
           <div class="order-card-items">
             <div class="order-card-quantity">
               <%= oi.quantity %>
