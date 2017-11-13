@@ -67,3 +67,26 @@
   background-color: $red;
   color: #FFF;
 }
+
+.validated-order {
+  margin: 10px;
+  border: solid 1px $green;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #FFF;
+  display: flex;
+}
+
+.validated-order-icon {
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  color: $green;
+  height: 100%;
+  justify-content: center;
+}
+
+.validated-order-text {
+
+}
+

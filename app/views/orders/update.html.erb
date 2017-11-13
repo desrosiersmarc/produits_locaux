@@ -1,13 +1,25 @@
 <div class="container">
   <div class="row">
-    <h3>Validation de votre commande</h3>
-      <p>Vous venez de valider votre commande</p>
-      <p>Vous allez recevoir un email de confirmation</p>
-      <p>Vous recevrez un nouvel email quand votre commande sera prête</p>
-      <%= link_to root_path do %>
-        <p class="btn btn-primary">
-          Retour au site
-        </p>
-      <% end %>
+    <div class="validated-order">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="validated-order-icon">
+            <i class="fa fa-check-square-o" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="validated-order-text">
+            <p>Merci pour votre commande, vous allez recevoir un email de confirmation de votre commande.</p>
+            <p>Un nouvel email vous sera envoyé quand votre commande sera prête.</p>
+            <p>A bientôt</p>
+            <%= link_to root_path do %>
+              <p class="btn btn-success btn-block">
+                  Retour au site
+              </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

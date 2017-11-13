@@ -1,5 +1,8 @@
 <div class="container">
   <div class="row">
+    <div class="status-title margin-bottom-10px">
+      <%= @order.id %> | <%= @order.order_status.name %>
+    </div>
     <div class="card-cart">
       <div class="order-cards-left">
         <i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -46,7 +49,7 @@
           <% end %>
         </div>
         <div class="col-xs-12 col-sm-3">
-          <% if @order.order_status_id <=2 %>
+          <% if @order.order_status_id <=2 || @order.order_status_id == 6  %>
             <%= simple_form_for @order do |f| %>
               <%= f.hidden_field :order_status, value: 3 %>
               <%= f.submit 'Commande prise en compte', class: 'btn btn-primary btn-block margin-bottom-10px' %>
@@ -54,10 +57,12 @@
           <% end %>
         </div>
         <div class="col-xs-12 col-sm-3">
-          <%= simple_form_for @order do |f| %>
-            <%= f.hidden_field :order_status, value: 4 %>
-            <%= f.submit 'Commande prête', class: 'btn btn-success btn-block margin-bottom-10px' %>
+          <% if @order.order_status_id != 4 %>
+            <%= simple_form_for @order do |f| %>
+              <%= f.hidden_field :order_status, value: 4 %>
+              <%= f.submit 'Commande prête', class: 'btn btn-success btn-block margin-bottom-10px' %>
           <% end %>
+            <% end %>
         </div>
         <div class="col-xs-12 col-sm-3">
           <%= simple_form_for @order do |f| %>
