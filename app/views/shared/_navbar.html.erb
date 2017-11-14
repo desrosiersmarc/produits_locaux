@@ -71,9 +71,9 @@
 </div>
 <%# if !current_user.admin %>
   <div class="delivery-day-area">
-    <p>Commandez avant le mercredi 20h et retirer votre commande le <%= l(helper_delivery_day, format: "%A %d %b") %></p>
+    <p><%= t(".delivery_day") %> <%= l(helper_delivery_day, format: "%A %d %b") %></p>
   </div>
   <div class="delivery-day delivery-day-70">
-    <p>Commandez avant le mercredi 20h et retirer votre commande le <%= l(helper_delivery_day, format: "%A %d %b") %></p>
+    <p><%= t(".delivery_day") %> <%= l(helper_delivery_day, format: "%A %d %b") %></p>
   </div>
 <%# end %>
