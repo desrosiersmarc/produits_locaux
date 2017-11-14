@@ -37,3 +37,14 @@ en:
         zero: "no product"
         one: "1 product"
         other: " %{count} products"
+  shared:
+    navbar:
+      sign_in: "Login"
+      delivery_day: "Commandez avant le mercredi 20h et retirer votre commande le
+      "
+      sign_out: "Log out"
+    orders:
+      order_management: "Order management"
+    edit_profil:
+      profile: "My account"
+

@@ -21,4 +21,14 @@ fr:
         zero: "aucun produit"
         one: "1 produit"
         other: " %{count} produits"
+  shared:
+    navbar:
+      sign_in: "Se connecter"
+      delivery_day: "Commandez avant le mercredi 20h et retirer votre commande le
+      "
+      sign_out: "Se déconnecter"
+    orders:
+      order_management: "Gestion des commandes"
+    edit_profil:
+      profile: "Mon compte"
 
