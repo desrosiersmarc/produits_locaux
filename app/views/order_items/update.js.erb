@@ -1,2 +1,2 @@
-$("#cart-list").html("<%= escape_javascript(render 'carts/cart_quantity', oi: @order_item) %>");
+$("#cart-list").html("<%= escape_javascript(render 'carts/cart_products', oi: @order_item) %>");
 $(".shopping-basket").html("<%= escape_javascript(render 'shared/shopping_basket') %>");
