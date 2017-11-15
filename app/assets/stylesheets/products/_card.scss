@@ -26,7 +26,7 @@
 
 .card-price-per-weight {
   position: absolute;
-  bottom:66px;
+  bottom:50px;
   right: 7px;
   width: 80px;
   height: 30px;
@@ -36,7 +36,7 @@
 
 .card-weight {
   position: absolute;
-  bottom: 50px;
+  bottom: 34px;
   right: 7px;
   width: 80px;
   height: 30px;
@@ -46,10 +46,10 @@
 
 .card-price {
   position: absolute;
-  bottom: 100px;
+  bottom: 82px;
   right: 7px;
   height: 25px;
-  width: 80px;
+  width: 65px;
   background-color: $yellow;
   display: flex;
   align-items: center;
@@ -62,16 +62,18 @@
   left: 15px;
   font-weight: bolder;
   max-width: 149px;
-  top: 216px;
+  top: 240px;
 }
 
 .card-description {
   position: absolute;
-  bottom: 148px;
+  bottom: 115px;
   left: 11px;
   color: $gray-light;
   font-style: italic;
   font-size: 12px;
+  height: 48px;
+  margin-right: 10px;
 }
 
 .picture {
