@@ -65,3 +65,24 @@
   background-color: $red;
   color: #FFF;
 }
+
+.card-cart-trash {
+  color: $red;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  width: 36px;
+}
+
+.right-card-cart-with-trash {
+  display: flex;
+}
+
+.trash-btn {
+  background: none;
+  border: none;
+}
+
+.card-cart-product-name {
+  padding-left: 5px;
+}

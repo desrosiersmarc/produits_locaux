@@ -1,0 +1,55 @@
+<% @order_items.each do |oi| %>
+  <div class="card-cart-area" id=<%='card-cart-area-' + "#{oi.id}"%>>
+
+  <div class="card-cart" id=<%='card-cart-' + "#{oi.id}"%>>
+    <div class="left-card-cart">
+      <div class="card-cart-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= helper_picture_url(oi.product)%>)">
+      </div>
+      <div class="card-cart-product-name">
+        <%= oi.product.name %>
+      </div>
+    </div>
+    <div class='right-card-cart-with-trash'>
+      <div class="right-card-cart">
+        <div class="cart-quantity-modification" >
+          <%= simple_form_for oi,remote: true do |f|  %>
+            <%= f.hidden_field :quantity, value: oi.quantity-1 %>
+            <%= f.submit '-', class: 'btn btn-plus-minus' %>
+          <% end %>
+          <div class="cart-quantity">
+            <%= oi.quantity %>
+          </div>
+          <%= simple_form_for oi,remote: true do |f|  %>
+            <%= f.hidden_field :quantity, value: oi.quantity+1 %>
+            <%= f.submit '+', class: 'btn btn-plus-minus' %>
+          <% end %>
+        </div>
+      </div>
+      <div class="card-cart-trash">
+        <%= simple_form_for oi,remote: true do |f| %>
+          <%= f.hidden_field :quantity, value: 0 %>
+          <%= button_tag(type: 'submit',class: 'trash-btn') do %>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  </div>
+<% end %>
+<div class="cart-validation-button">
+  <% if current_order.id.nil? || order_items_count == 0 %>
+    <%= link_to root_path do %>
+      <p class="btn btn-danger btn-block">
+        Votre panier est vide
+      </p>
+    <% end %>
+  <% else %>
+    <%= link_to order_path(current_order.id), method: "patch" do %>
+      <p class="btn btn-danger btn-block">
+        Valider votre panier
+      </p>
+    <% end %>
+  <% end %>
+</div>
