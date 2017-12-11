@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @vegetables = Category.find(3)
+    @dairy_products = Category.find(3)
     @meats = Category.find(1)
     @breds = Category.find(4)
     @pastries = Category.find(2)
