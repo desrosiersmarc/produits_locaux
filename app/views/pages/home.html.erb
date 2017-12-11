@@ -3,9 +3,9 @@
 <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('marie.jpg') %>">
 </div>
 <%= render 'contact_informations' %>
-<%= link_to category_path(@vegetables) do %>
-  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('fruits2.jpg') %>">
-    <h1><%= @vegetables.name %></h1>
+<%= link_to category_path(@dairy_products) do %>
+  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path('lait.jpeg') %>">
+    <h1><%= @dairy_products.name %></h1>
   </div>
 <% end %>
 <div class="wrapper">
